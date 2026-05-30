@@ -39,7 +39,7 @@ export default function ReactList() {
                     user.age > 25 ? (
                         <li key={user.id}>{user.name} is a senior developer</li>
                     ) : (
-                        <li key={user.id}>{user.name} is a unior </li>
+                        <li key={user.id}>{user.name} is a unior developer </li>
                     )
                 ))}
             </ul>
