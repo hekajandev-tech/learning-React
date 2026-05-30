@@ -32,7 +32,17 @@ export default function ReactList() {
 
 
             </table>
+            
 
+            <ul>
+                {users.map((user)=>(
+                    user.age > 25 ? (
+                        <li key={user.id}>{user.name} is a senior developer</li>
+                    ) : (
+                        <li key={user.id}>{user.name} is a unior developer</li>
+                    )
+                ))}
+            </ul>
         </div>
     );
 
