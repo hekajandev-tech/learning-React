@@ -5,6 +5,7 @@ import UpdateTime from "./UpdateTime";
 import Count from "./countNum";
 import Timer from "./Timer";
 import ReactList from "./ListMap";
+import ClientEvent from "./ClientEvent";
 
 //Child calling 
 
@@ -34,6 +35,7 @@ export default function App() {
       <Count/>
       <Timer/>
       <ReactList/>
+      <ClientEvent/>
     </Welcome>
   );
 }
