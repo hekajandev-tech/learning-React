@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+//importing external stylesheet
+import './mystyles.css';
 
 export default function ReactList() {
     // const lst =['App' , 'Mobile','web','mern'];
@@ -7,13 +9,35 @@ export default function ReactList() {
         { id: 1, name: 'Geeks', age: 30 },
         { id: 2, name: 'for', age: 25 },
         { id: 3, name: 'Geeks', age: 20 },
-
-
-
-
     ]
+
+    //internal styles of React
+    const mystyle = {
+        color: 'red ',
+        fontFamily: 'serif',
+        textAlign: 'center',
+        fontSize: '20px'
+    }
+
+    const lables = {
+        color: 'green',
+        fontFamily: 'serif',
+        textAlign: 'center',
+        fontSize: '15px'
+    }
+
+
     return (
         <div>
+            <h1 style={{ color: 'blue' }}>Table</h1>
+            <h1 style={mystyle}>Table</h1>
+
+            {/* Name */}
+            <lable style={lables}>Enter your Name: </lable>
+            <input type="text" name="username"/>
+            <br /><br />
+
+
             <table border='1' cellSpacing={1} cellPadding={10}>
 
                 <tr>
@@ -32,10 +56,10 @@ export default function ReactList() {
 
 
             </table>
-            
+
 
             <ul>
-                {users.map((user)=>(
+                {users.map((user) => (
                     user.age > 25 ? (
                         <li key={user.id}>{user.name} is a senior developer</li>
                     ) : (
