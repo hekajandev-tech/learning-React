@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect } from "react";
 //importing external stylesheet
 import './mystyles.css';
+//importing module.css
+import mystyles from './modules/mystyle.module.css';
 
 export default function ReactList() {
     // const lst =['App' , 'Mobile','web','mern'];
@@ -34,29 +36,29 @@ export default function ReactList() {
 
             {/* Name */}
             <lable style={lables}>Enter your Name: </lable>
-            <input type="text" name="username"/>
+            <input type="text" name="username" />
             <br /><br />
 
+            <div className={mystyles.mycls}>
+                <table border='1' cellSpacing={1} cellPadding={10}>
 
-            <table border='1' cellSpacing={1} cellPadding={10}>
-
-                <tr>
-                    <th>User ID</th>
-                    <th>Name</th>
-                    <th>Age</th>
-                </tr>
-
-                {users.map((user) => (
                     <tr>
-                        <td>{user.id}</td>
-                        <td>{user.name}</td>
-                        <td>{user.age}</td>
+                        <th>User ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
                     </tr>
-                ))}
+
+                    {users.map((user) => (
+                        <tr>
+                            <td>{user.id}</td>
+                            <td>{user.name}</td>
+                            <td>{user.age}</td>
+                        </tr>
+                    ))}
 
 
-            </table>
-
+                </table>
+            </div>
 
             <ul>
                 {users.map((user) => (
